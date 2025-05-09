@@ -1,7 +1,7 @@
 // 答え
 let kotae = Math.floor(Math.random()*10) + 1;
 console.log('答え（デバッグ用）: ' + kotae);
-
+let keisoku = 0;
 // 入力回数（予想回数）
 let kaisu = 0;
 
@@ -23,12 +23,16 @@ function hantei() {
   // 課題3-1における出力先はコンソール
   kaisu = kaisu + 1;
   console.log("「"+(kaisu)+"回目の予想: "+ (yoso) +"」");
-  if(kaisu >= 4){
+  if(keisoku === 4){
     console.log("「答えは" + kotae + "でした．すでにゲームは終わっています」");
-  } else if (kotae === yoso){
+    return;
+  }
+  if (kotae === yoso){
     console.log("「正解です．おめでとう!」");
-  } else if (kaisu >=3){
+    keisoku = 4;
+  } else if (kaisu === 3){
     console.log("「まちがい．残念でした答えは " + kotae + "です．」");
+    keisoku = 4;
   } else if (kotae > yoso) {
     console.log("「まちがい．答えはもっと大きいですよ」");
   } else if (kotae < yoso) {
