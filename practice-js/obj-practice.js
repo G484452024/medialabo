@@ -22,4 +22,4 @@ for (let n of campus.buildingD) {
 }
 for(let s of gakka){
 	console.log(s.name)
-  }
+}
