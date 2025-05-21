@@ -18,6 +18,11 @@ function print(data) {
   }
 }
 
+document.querySelector("#print").addEventListener("click", function () {
+  let input = document.querySelector('input[name="gurume"]');
+  let keyword = input.value;
+  console.log("検索キー: " + keyword);
+});
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
