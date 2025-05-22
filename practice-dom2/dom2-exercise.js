@@ -16,3 +16,19 @@ let gakka = [
 
 //////////////// ここから下にプログラムを書きたそう!
 
+function greeting() {
+	let a = document.createElement('a');
+    let p = document.querySelector('h2#addr');
+    p.insertAdjacentElement('afterend',a); 
+    a.textContent = campus.address;
+	let u = document.createElement('ul'); 
+	for (let n of gakka) {
+    	let i = document.createElement('li'); 
+    	i.textContent = n.name;                
+    	u.insertAdjacentElement('beforeend', i);
+		p = document.querySelector('h2#dept');     
+    	p.insertAdjacentElement('afterend', u);   
+	}
+}
+b = document.querySelector('button#show');
+b.addEventListener('click', greeting);
