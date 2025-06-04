@@ -1,4 +1,8 @@
-h1 {
-	color: white;
-	text-shadow:1px 1px 10px navy;
+body {
+  background-color: #f0f8ff;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
